@@ -91,7 +91,7 @@ class Football_Stadium
 
 int main()
 {
-	Football_Player player_a //Initialised an object from the class 
+	Football_Player player_a; //Initialised an object from the class 
 	
 	std::cout<< "I am a football player with the name of: " << player_a.Name << std::endl;
 	
