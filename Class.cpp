@@ -14,7 +14,7 @@
 	Speed	//Float
 	Ball Control	//Int
 	Shooting	//int
-	Tackaling	//Int
+	tackling	//Int
 	Positioning	//int
 	Fitness	int
 	*/
@@ -44,9 +44,30 @@
 class Football_Player
 {
 	public:
+		string Name;
+		bool Prefered_Foot;	//Left is 0, Right is 1.
+		float Height;	//In Meters
+		int Weight;	//In KG
+		int Age;
+		float Speed;	//M/S
+		int Ball_Control;	//Generic Value, how well they can use the ball
+		int Shooting;	//Genetic value, how well they can kick a ball
+		int Tackling;	//How well they can tackle a ball
+		int Positioning;	//How well the players position themself 
+		int Fitness;	//How much stamina the player has.
 	
 		Football_Player()
 		{
+			Name = "Default Name";
+			Height = 1.5;
+			Weight = 50;
+			Age = 18;
+			Speed = 5;
+			Ball_Control = 10;
+			Shooting = 5;
+			Tackling = 5;
+			Positioning = 5;
+			Fitness = 5;
 		}
 };
 
