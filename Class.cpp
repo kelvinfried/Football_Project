@@ -44,7 +44,7 @@
 class Football_Player
 {
 	public:
-		string Name;
+		std::string Name;
 		bool Prefered_Foot;	//Left is 0, Right is 1.
 		float Height;	//In Meters
 		int Weight;	//In KG
@@ -58,7 +58,7 @@ class Football_Player
 	
 		Football_Player()
 		{
-			Name = "Default Name";
+			Name = "Default Player Name";
 			Height = 1.5;
 			Weight = 50;
 			Age = 18;
@@ -91,4 +91,9 @@ class Football_Stadium
 
 int main()
 {
+	Football_Player player_a //Initialised an object from the class 
+	
+	std::cout<< "I am a football player with the name of: " << player_a.Name << std::endl;
+	
+	return 0;
 }
