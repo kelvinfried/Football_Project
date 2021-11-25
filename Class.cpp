@@ -102,7 +102,7 @@ class Football_Team
 			{
 				//Players_on_bench[ x + 10 ] = Players.Name();
 				Players_on_bench[ x + 10 ] = "Default Player Name";
-			} //An object needs to be created inorder to referance it's attributes
+			} //An object needs to be created inorder to referance it's attributes; So in theroy this should be done at run time of the game itself
 			int Yellow_cards = 0;
 			int Red_cards = 0;
 		}
