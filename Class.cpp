@@ -97,6 +97,7 @@ class Football_Team
 				//Players_on_bench[ x ] = Players.Name();
 				Players_on_bench[ x ] = "Default Player Name";
 			}
+			
 			for( int x = 0; x < FOUR; x++ )
 			{
 				//Players_on_bench[ x + 10 ] = Players.Name();
