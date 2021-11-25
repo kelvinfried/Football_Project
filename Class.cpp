@@ -126,7 +126,7 @@ class Football_Stadium
 			Stadium_location = "Default Stadium Location";
 			for( int x = 0; x < TWO; x++)
 			{
-				Location_of_ball[ x ] = "Default Team Name";
+				Teams[ x ] = "Default Team Name";
 			}
 			
 			Location_of_ball = 0.0f;
@@ -140,6 +140,10 @@ int main()
 	Football_Player player_a; //Initialised an object from the class 
 	
 	std::cout<< "I am a football player with the name of: " << player_a.Name << std::endl;
+	
+	Football_Team Team_a;
+	
+	std::cout<< "The football team has a name called: " << Team_a.Name << std::endl; 
 	
 	return 0;
 }
