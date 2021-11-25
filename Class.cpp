@@ -111,9 +111,27 @@ class Football_Team
 class Football_Stadium
 {
 	public:
+		std::string Stadium_name;
+		std::string Stadium_location;
+		Football_Team Teams[2];
+		float Location_of_ball;
+		int Supporters;
+		float Time_left;
 	
 		Football_Stadium()
 		{
+			const short TWO = 2;
+			
+			Stadium_name = "Default Stadium Name";
+			Stadium_location = "Default Stadium Location";
+			for( int x = 0; x < TWO; x++)
+			{
+				Location_of_ball[ x ] = "Default Team Name";
+			}
+			
+			Location_of_ball = 0.0f;
+			Supporters = 0;
+			Time_left = 90.0f;
 		}
 };
 
