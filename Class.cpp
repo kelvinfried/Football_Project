@@ -111,8 +111,8 @@ class Football_Team
 class Football_Stadium
 {
 	public:
-		std::string Stadium_name;
-		std::string Stadium_location;
+		std::string Name;
+		std::string Location;
 		Football_Team Teams[2];
 		float Location_of_ball;
 		int Supporters;
@@ -122,8 +122,8 @@ class Football_Stadium
 		{
 			const short TWO = 2;
 			
-			Stadium_name = "Default Stadium Name";
-			Stadium_location = "Default Stadium Location";
+			Name = "Default Stadium Name";
+			Location = "Default Stadium Location";
 			/*for( int x = 0; x < TWO; x++)
 			{
 				Teams[ x ] = "Default Team Name";
@@ -143,7 +143,12 @@ int main()
 	
 	Football_Team Team_a;
 	
-	std::cout<< "The football team has a name called: " << Team_a.Teams[0].Name << std::endl; 
+	std::cout<< "The football team has a name called: " << Team_a.Name << std::endl; 
+	
+	Football_Stadium Stadium_a;
+	
+	std::cout<< "The football stadium is called: " << Stadium_a.Name << " is located at " << Stadium_a.Location << std::endl;
+	std::cout<< "The teams playing there are called " << Stadium_a.Teams[ 0 ] << " and " << Stadium_a.Teams[ 1 ] << std::endl;
 	
 	return 0;
 }
