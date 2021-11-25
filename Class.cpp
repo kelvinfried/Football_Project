@@ -124,10 +124,10 @@ class Football_Stadium
 			
 			Stadium_name = "Default Stadium Name";
 			Stadium_location = "Default Stadium Location";
-			for( int x = 0; x < TWO; x++)
+			/*for( int x = 0; x < TWO; x++)
 			{
 				Teams[ x ] = "Default Team Name";
-			}
+			}*/ //Lost track of what I was doing, This is dumb as I was already set the team name in the football team class. My bad
 			
 			Location_of_ball = 0.0f;
 			Supporters = 0;
@@ -143,7 +143,7 @@ int main()
 	
 	Football_Team Team_a;
 	
-	std::cout<< "The football team has a name called: " << Team_a.Name << std::endl; 
+	std::cout<< "The football team has a name called: " << Team_a.Teams[0].Name << std::endl; 
 	
 	return 0;
 }
