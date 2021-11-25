@@ -148,7 +148,7 @@ int main()
 	Football_Stadium Stadium_a;
 	
 	std::cout<< "The football stadium is called: " << Stadium_a.Name << " is located at " << Stadium_a.Location << std::endl;
-	std::cout<< "The teams playing there are called " << Stadium_a.Teams[ 0 ] << " and " << Stadium_a.Teams[ 1 ] << std::endl;
+	std::cout<< "The teams playing there are called " << Stadium_a.Teams[ 0 ].Name << " and " << Stadium_a.Teams[ 1 ].Name << std::endl;
 	
 	return 0;
 }
