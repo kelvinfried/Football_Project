@@ -148,7 +148,7 @@ int main()
 	std::cout<< "" << std::endl;
 	
 	Football_Team Team_a;
-	std::cout<< "Gaming Test" << std::endl;
+	//std::cout<< "Gaming Test" << std::endl;
 
 	std::cout<< "The football team has a name called: " << Team_a.Name << std::endl; 
 	std::cout<< "" << std::endl;
