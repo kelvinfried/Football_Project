@@ -95,7 +95,8 @@ class Football_Team
 			for( int x = 0; x < ELEVEN; x++ )	//Trying to see if this works.
 			{
 				//Players_on_bench[ x ] = Players.Name();
-				Players_on_bench[ x ] = "Default Player Name";
+				//std::cout<< "Test" << std::endl; _/ Test passed
+				Players_on_pitch[ x ] = "Default Player Name";
 			}
 			
 			for( int x = 0; x < FOUR; x++ )
@@ -103,6 +104,7 @@ class Football_Team
 				//Players_on_bench[ x + 10 ] = Players.Name();
 				Players_on_bench[ x + 10 ] = "Default Player Name";
 			} //An object needs to be created inorder to referance it's attributes; So in theroy this should be done at run time of the game itself
+			
 			int Yellow_cards = 0;
 			int Red_cards = 0;
 		}
@@ -140,15 +142,19 @@ int main()
 	Football_Player player_a; //Initialised an object from the class 
 	
 	std::cout<< "I am a football player with the name of: " << player_a.Name << std::endl;
+	std::cout<< "" << std::endl;
 	
 	Football_Team Team_a;
-	
+	std::cout<< "Gaming Test" << std::endl;
+
 	std::cout<< "The football team has a name called: " << Team_a.Name << std::endl; 
+	std::cout<< "" << std::endl;
 	
 	Football_Stadium Stadium_a;
 	
 	std::cout<< "The football stadium is called: " << Stadium_a.Name << " is located at " << Stadium_a.Location << std::endl;
 	std::cout<< "The teams playing there are called " << Stadium_a.Teams[ 0 ].Name << " and " << Stadium_a.Teams[ 1 ].Name << std::endl;
+	std::cout<< "" << std::endl;
 	
 	return 0;
 }
