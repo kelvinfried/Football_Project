@@ -49,6 +49,7 @@ class Football_Player
 		float Height;	//In Meters
 		int Weight;	//In KG
 		int Age;
+		int Number;
 		float Speed;	//M/S
 		int Ball_Control;	//Generic Value, how well they can use the ball
 		int Shooting;	//Genetic value, how well they can kick a ball
@@ -62,6 +63,7 @@ class Football_Player
 			Height = 1.5;
 			Weight = 50;
 			Age = 18;
+			Number = 0;
 			Speed = 5;
 			Ball_Control = 10;
 			Shooting = 5;
@@ -137,6 +139,21 @@ class Football_Stadium
 			Location_of_ball = 0.0f;
 			Supporters = 0;
 			Time_left = 90.0f;
+		}
+};
+
+class RPG_Character
+{
+	int Height;
+	int Mana;
+	std::string Inventory_Slots[ 10 ];
+	
+	RPG_Character:
+		Height = 1;
+		Mana =  0;
+		for( int x = 0; x < 10; x++ )
+		{
+			Inventory_Slots[ x ] = "No Item in this slot";
 		}
 };
 
