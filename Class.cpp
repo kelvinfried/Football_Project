@@ -102,8 +102,11 @@ class Football_Team
 			for( int x = 0; x < FOUR; x++ )
 			{
 				//Players_on_bench[ x + 10 ] = Players.Name();
-				Players_on_bench[ x + 10 ] = "Default Player Name";
-			} //An object needs to be created inorder to referance it's attributes; So in theroy this should be done at run time of the game itself
+				//std::cout<< "Test" << std::endl;	//Only happens twice
+				Players_on_bench[ x ] = "Default Player Name";
+				//std::cout<< "Done" << std::endl;	// apperas to end after here on two turns
+			} 
+			//An object needs to be created inorder to referance it's attributes; So in theroy this should be done at run time of the game itself
 			
 			int Yellow_cards = 0;
 			int Red_cards = 0;
