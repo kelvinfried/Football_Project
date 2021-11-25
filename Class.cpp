@@ -85,9 +85,23 @@ class Football_Team
 	
 		Football_Team()
 		{
+			const short ELEVEN = 11;
+			const short FOUR = 4;
+			
 			Name = "Default Team Name";
 			Colour = "Black";
 			Manager = "Default Manager Name";
+			//Player passed as it already has it's default values.
+			for( int x = 0; x < ELEVEN; x++ )	//Trying to see if this works.
+			{
+				Players_on_bench[ x ] = Players.Name;
+			}
+			for( int x = 0; x < FOUR; x++ )
+			{
+				Players_on_bench[ x + 10 ] = Players.Name;
+			}
+			int Yellow_cards = 0;
+			int Red_cards = 0;
 		}
 };
 
