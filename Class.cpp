@@ -2,7 +2,7 @@
 #include <string>
 
 //Classes
-//Step 1
+//Step 1 - Planning Phase.
 //Data expected to see inside a footabll stadiums
 //Football Players Vairables
 	/*
@@ -40,4 +40,34 @@
 	num of supporters	//int
 	Time Left in game	//float
 	*/
+
+class Football_Player
+{
+	public:
 	
+		Football_Player()
+		{
+		}
+};
+
+class Football_Team
+{
+	public:
+	
+		Football_Team()
+		{
+		}
+};
+
+class Football_Stadium
+{
+	public:
+	
+		Football_Stadium()
+		{
+		}
+};
+
+int main()
+{
+}
