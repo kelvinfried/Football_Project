@@ -94,12 +94,14 @@ class Football_Team
 			//Player passed as it already has it's default values.
 			for( int x = 0; x < ELEVEN; x++ )	//Trying to see if this works.
 			{
-				Players_on_bench[ x ] = Players.Name;
+				//Players_on_bench[ x ] = Players.Name();
+				Players_on_bench[ x ] = "Default Player Name";
 			}
 			for( int x = 0; x < FOUR; x++ )
 			{
-				Players_on_bench[ x + 10 ] = Players.Name;
-			}
+				//Players_on_bench[ x + 10 ] = Players.Name();
+				Players_on_bench[ x + 10 ] = "Default Player Name";
+			} //An object needs to be created inorder to referance it's attributes
 			int Yellow_cards = 0;
 			int Red_cards = 0;
 		}
