@@ -74,9 +74,20 @@ class Football_Player
 class Football_Team
 {
 	public:
+		std::string Name;
+		std::string Colour;
+		std::string Manager;
+		Football_Player Players[15];
+		std::string Players_on_pitch[11];
+		std::string Players_on_bench[4];
+		int Yellow_cards;
+		int Red_cards;
 	
 		Football_Team()
 		{
+			Name = "Default Team Name";
+			Colour = "Black";
+			Manager = "Default Manager Name";
 		}
 };
 
