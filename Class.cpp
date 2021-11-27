@@ -152,10 +152,12 @@ class RPG_Item	//I want the enimies to have the items on their bodies
 		int Damage;
 		
 		RPG_Item()
+		{
 			Name = "Default Item Name";
 			Weight = 0;
 			Weapon = false;
 			Damage = 0;
+		}
 };
 
 class RPG_Character
@@ -171,6 +173,7 @@ class RPG_Character
 		int Current_location[ 2 ];
 		
 		RPG_Character()
+		{
 			Height = 1;
 			Mana =  0;
 			/*for( int x = 0; x < 10; x++ )
@@ -178,13 +181,21 @@ class RPG_Character
 				Inventory_Slots[ x ] = "No Item in this slot";
 			}*/
 			Equipt_Weapon = 0;
-			
 			Start_location = { 0, 0 };
 			Current_location{ 0, 0 };
-			
+		}
+		
 		void Attack()
 		{
-		
+			if( Inventory_Slots[ Equipt_Weapon ].Weapon == true )
+			{
+				std::cout<< "You can attack with this weapon" << std::endl;
+			}
+			
+			else
+			{
+					std::cout<< "You cannot attack with this weapon" << std::endl;
+			}
 		}
 };
 
