@@ -181,7 +181,7 @@ class RPG_Character
 			Equipt_Weapon = 0;
 			
 			Start_location = { 0, 0 };
-			Current_location{ 0, 0};
+			Current_location{ 0, 0 };
 			
 		void Attack()
 		{
@@ -203,6 +203,8 @@ class RPG_Dungeon
 		int Exit_Point[ 2 ];
 		
 		RPG_Dungeon:
+			Entry_Point = { 0, 0 };
+			Exit_Point = { 0, 0 };
 			
 			
 };
