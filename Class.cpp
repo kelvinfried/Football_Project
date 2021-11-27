@@ -142,7 +142,7 @@ class Football_Stadium
 		}
 };
 
-class RPG_Item
+class RPG_Item	//I want the enimies to have the items on their bodies
 {
 	public:
 		std::string Name;
@@ -151,7 +151,7 @@ class RPG_Item
 		bool Weapon;
 		int Damage;
 		
-		RPG_Item:
+		RPG_Item():
 			Name = "Default Item Name";
 			Item = 0;
 			Weight = 0;
@@ -171,7 +171,7 @@ class RPG_Character
 		int Start_location[ 2 ];
 		int Current_location[ 2 ];
 		
-		RPG_Character:
+		RPG_Character():
 			Height = 1;
 			Mana =  0;
 			/*for( int x = 0; x < 10; x++ )
@@ -192,8 +192,9 @@ class RPG_Character
 class RPG_Dungeon
 {
 	public:
+		std::string Name;
 		RPG_Character Player_character;
-		RPG_Character Entity[ 16 ];	//Need to add a start location to this so it's not redundant
+		RPG_Character Entity[ 4 ];	//Need to add a start location to this so it's not redundant
 		
 		/*int Location_Of_Player[ 2 ];
 		int Start_location[ 2 ];
@@ -202,16 +203,16 @@ class RPG_Dungeon
 		int Entry_Point[ 2 ];
 		int Exit_Point[ 2 ];
 		
-		RPG_Dungeon:
+		RPG_Dungeon():
+			Name = "Default Dungeon Name";
 			Entry_Point = { 0, 0 };
-			Exit_Point = { 0, 0 };
-			
-			
+			Exit_Point = { 0, 0 };	
 };
 
 int main()
 {
-	Football_Player player_a; //Initialised an object from the class 
+	//Football Code
+	/*Football_Player player_a; //Initialised an object from the class 
 	
 	std::cout<< "I am a football player with the name of: " << player_a.Name << std::endl;
 	std::cout<< "" << std::endl;
@@ -226,7 +227,14 @@ int main()
 	
 	std::cout<< "The football stadium is called: " << Stadium_a.Name << " is located at " << Stadium_a.Location << std::endl;
 	std::cout<< "The teams playing there are called " << Stadium_a.Teams[ 0 ].Name << " and " << Stadium_a.Teams[ 1 ].Name << std::endl;
-	std::cout<< "" << std::endl;
+	std::cout<< "" << std::endl;*/
+	
+	//RPG Code
+	RPG_Dungeon Starting_Dungeon;
+	//Top down class access
+	std::cout<< "The dungeon is called, " << Starting_Dungeon.Name << " the player enters the room, and starts at the location " << Starting_Dungeon.Entry_Point[ 0 ] << " , " << Starting_Dungeon.Entry_Point[ 1 ] << std::endl;
+	
+	
 	
 	return 0;
 }
