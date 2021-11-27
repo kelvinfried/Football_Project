@@ -165,8 +165,11 @@ class RPG_Character
 		int Height;
 		int Mana;
 		//std::string Inventory_Slots[ 10 ];
-		RPG_Item Inventory_Slots[ 10 ];
+		RPG_Item Inventory_Slots[ 5 ];
 			short Equipt_Weapon;
+		
+		int Start_location[ 2 ];
+		int Current_location[ 2 ];
 		
 		RPG_Character:
 			Height = 1;
@@ -177,10 +180,31 @@ class RPG_Character
 			}*/
 			Equipt_Weapon = 0;
 			
+			Start_location = { 0, 0 };
+			Current_location{ 0, 0};
+			
 		void Attack()
 		{
 		
 		}
+};
+
+class RPG_Dungeon
+{
+	public:
+		RPG_Character Player_character;
+		RPG_Character Entity[ 16 ];	//Need to add a start location to this so it's not redundant
+		
+		/*int Location_Of_Player[ 2 ];
+		int Start_location[ 2 ];
+		int End_location[ 2 ];*/	//Not needed as these will be kept in the players class rather than in the dungeon
+		
+		int Entry_Point[ 2 ];
+		int Exit_Point[ 2 ];
+		
+		RPG_Dungeon:
+			
+			
 };
 
 int main()
