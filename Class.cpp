@@ -154,9 +154,22 @@ class RPG_Item	//I want the enimies to have the items on their bodies
 		RPG_Item()
 		{
 			Name = "Default Item Name";
+			Value = 0;
 			Weight = 0;
 			Weapon = false;
 			Damage = 0;
+		}
+};
+
+class RPG_Inventory_Slot
+{
+	public:
+		int Slot_number
+		RPG_Item Item;
+		
+		RPG_Inventory_Slot()
+		{
+			Slot_number = 0;
 		}
 };
 
@@ -167,7 +180,7 @@ class RPG_Character
 		int Height;
 		int Mana;
 		//std::string Inventory_Slots[ 10 ];
-		RPG_Item Inventory_Slots[ 2 ];
+		//RPG_Inventory_Slot Slot[ 2 ];
 			short Equipt_Weapon;
 		
 		int Start_location[ 2 ];
@@ -181,13 +194,14 @@ class RPG_Character
 			/*for( int x = 0; x < 10; x++ )
 			{
 				Inventory_Slots[ x ] = "No Item in this slot";
-			}*/	//Need to fill array with a null value;
+			}	//Need to fill array with a null value;
 			for( int x = 0; x < 2; x++ )
 			{
-				Inventory_Slots[ x ] = '\0';	//Testing to see if a null character works
-			}
+				//Inventory_Slots[ x ] = '\0';	//Testing to see if a null character works	//Does not work
+			}*/
 			
 			Equipt_Weapon = 0;
+			
 			for( int x = 0; x < 2; x++ )
 			{
 				Start_location[ x ] = 0;
@@ -197,7 +211,7 @@ class RPG_Character
 		
 		void Attack()
 		{
-			if( Inventory_Slots[ Equipt_Weapon ].Weapon == true )
+			if( Inventory_Slots[ Equipt_Weapon ].Item.Weapon == true )
 			{
 				std::cout<< "You can attack with this weapon" << std::endl;
 			}
