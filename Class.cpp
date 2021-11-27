@@ -163,6 +163,7 @@ class RPG_Item	//I want the enimies to have the items on their bodies
 class RPG_Character
 {
 	public:
+		std::string Name;
 		int Height;
 		int Mana;
 		//std::string Inventory_Slots[ 10 ];
@@ -174,6 +175,7 @@ class RPG_Character
 		
 		RPG_Character()
 		{
+			Name = "Default Character Name";
 			Height = 1;
 			Mana =  0;
 			/*for( int x = 0; x < 10; x++ )
@@ -256,7 +258,9 @@ int main()
 	//Top down class access
 	std::cout<< "The dungeon is called, " << Starting_Dungeon.Name << " the player enters the room, and starts at the location " << Starting_Dungeon.Entry_Point[ 0 ] << " , " << Starting_Dungeon.Entry_Point[ 1 ] << std::endl << " Do you want to know more.?" << std::endl;
 	
+	std::cout<<"You the player are called  " << Starting_Dungeon.Player_character.Name << " you have a height of " << Starting_Dungeon.Player_character.Height << std::endl;
 	
+	std::cout<<"You are jumped and attempt to attack.. " << Starting_Dungeon.Player_character.Attack() << std::endl;	//Testing using the attack method
 	
 	return 0;
 }
