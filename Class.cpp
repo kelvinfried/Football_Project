@@ -181,8 +181,13 @@ class RPG_Character
 				Inventory_Slots[ x ] = "No Item in this slot";
 			}*/
 			Equipt_Weapon = 0;
-			Start_location = { 0, 0 };
-			Current_location{ 0, 0 };
+			/*Start_location = { 0, 0 };
+			Current_location = { 0, 0 };*/	//Cannot assign values to an array like this, ammending
+			for( int x = 0; x < 2; x++ )
+			{
+				Start_location[ x ] = 0;
+				Current_location[ x ] = 0;
+			}
 		}
 		
 		void Attack()
@@ -214,9 +219,16 @@ class RPG_Dungeon
 		int Exit_Point[ 2 ];
 		
 		RPG_Dungeon()
+		{
 			Name = "Default Dungeon Name";
-			Entry_Point = { 0, 0 };
-			Exit_Point = { 0, 0 };	
+			/*Entry_Point = { 0, 0 };
+			Exit_Point = { 0, 0 };*/
+			for( int x = 0; x < 2; x++ )
+			{
+				Entry_Point[ x ] = 0;
+				Exit_Point[ x ] = 0;
+			}
+		}
 };
 
 int main()
@@ -242,7 +254,7 @@ int main()
 	//RPG Code
 	RPG_Dungeon Starting_Dungeon;
 	//Top down class access
-	std::cout<< "The dungeon is called, " << Starting_Dungeon.Name << " the player enters the room, and starts at the location " << Starting_Dungeon.Entry_Point[ 0 ] << " , " << Starting_Dungeon.Entry_Point[ 1 ] << std::endl;
+	std::cout<< "The dungeon is called, " << Starting_Dungeon.Name << " the player enters the room, and starts at the location " << Starting_Dungeon.Entry_Point[ 0 ] << " , " << Starting_Dungeon.Entry_Point[ 1 ] << std::endl << " Do you want to know more.?" << std::endl;
 	
 	
 	
