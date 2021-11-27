@@ -169,7 +169,7 @@ class RPG_Inventory_Slot
 		
 		RPG_Inventory_Slot()
 		{
-			Slot_number = 0;
+			Slot_number = 99;
 		}
 };
 
@@ -219,7 +219,7 @@ class RPG_Character
 			{
 				std::cout<< "You cannot attack with this weapon" << std::endl;
 			}*/
-			//std::cout<< " The slot is " << Slot[ 0 ].Slot_number << std::endl;
+			std::cout<< " The slot is " << Slot[ 0 ].Slot_number << std::endl;
 		}
 };
 
@@ -278,8 +278,8 @@ int main()
 	
 	std::cout<<"You the player are called  " << Starting_Dungeon.Player.Name << " you have a height of " << Starting_Dungeon.Player.Height << std::endl;
 	
-	//std::cout<<"You are jumped and attempt to attack.. " << Starting_Dungeon.Player.Attack_check() << std::endl;	//Testing using the attack method
-	std::cout<<"You are jumped and attempt to attack.. " << Starting_Dungeon.Player.Slot[0].Item.Weapon << std::endl;	//Testing using the attack method
+	//std::cout<<"You are jumped and attempt to attack.. " << Starting_Dungeon.Player.Attack_check() << std::endl;	//Testing using the attack method	//Still cannot get this to work
+	//std::cout<<"You are jumped and attempt to attack.. " << Starting_Dungeon.Player.Slot[0].Item.Weapon << std::endl;	//Testing using the attack method
 	
 	return 0;
 }
