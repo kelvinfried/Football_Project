@@ -151,9 +151,8 @@ class RPG_Item	//I want the enimies to have the items on their bodies
 		bool Weapon;
 		int Damage;
 		
-		RPG_Item():
+		RPG_Item()
 			Name = "Default Item Name";
-			Item = 0;
 			Weight = 0;
 			Weapon = false;
 			Damage = 0;
@@ -171,7 +170,7 @@ class RPG_Character
 		int Start_location[ 2 ];
 		int Current_location[ 2 ];
 		
-		RPG_Character():
+		RPG_Character()
 			Height = 1;
 			Mana =  0;
 			/*for( int x = 0; x < 10; x++ )
@@ -203,7 +202,7 @@ class RPG_Dungeon
 		int Entry_Point[ 2 ];
 		int Exit_Point[ 2 ];
 		
-		RPG_Dungeon():
+		RPG_Dungeon()
 			Name = "Default Dungeon Name";
 			Entry_Point = { 0, 0 };
 			Exit_Point = { 0, 0 };	
