@@ -142,18 +142,33 @@ class Football_Stadium
 		}
 };
 
+class RPG_Item
+{
+	public:
+		int Value;
+		
+		RPG_Item:
+			Item = 0;
+}
+
 class RPG_Character
 {
-	int Height;
-	int Mana;
-	std::string Inventory_Slots[ 10 ];
-	
-	RPG_Character:
-		Height = 1;
-		Mana =  0;
-		for( int x = 0; x < 10; x++ )
+	public:
+		int Height;
+		int Mana;
+		std::string Inventory_Slots[ 10 ];
+		
+		RPG_Character:
+			Height = 1;
+			Mana =  0;
+			for( int x = 0; x < 10; x++ )
+			{
+				Inventory_Slots[ x ] = "No Item in this slot";
+			}
+			
+		void Attack()
 		{
-			Inventory_Slots[ x ] = "No Item in this slot";
+			
 		}
 };
 
