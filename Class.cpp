@@ -145,30 +145,41 @@ class Football_Stadium
 class RPG_Item
 {
 	public:
+		std::string Name;
 		int Value;
+		int Weight;
+		bool Weapon;
+		int Damage;
 		
 		RPG_Item:
+			Name = "Default Item Name";
 			Item = 0;
-}
+			Weight = 0;
+			Weapon = false;
+			Damage = 0;
+};
 
 class RPG_Character
 {
 	public:
 		int Height;
 		int Mana;
-		std::string Inventory_Slots[ 10 ];
+		//std::string Inventory_Slots[ 10 ];
+		RPG_Item Inventory_Slots[ 10 ];
+			short Equipt_Weapon;
 		
 		RPG_Character:
 			Height = 1;
 			Mana =  0;
-			for( int x = 0; x < 10; x++ )
+			/*for( int x = 0; x < 10; x++ )
 			{
 				Inventory_Slots[ x ] = "No Item in this slot";
-			}
+			}*/
+			Equipt_Weapon = 0;
 			
 		void Attack()
 		{
-			
+		
 		}
 };
 
