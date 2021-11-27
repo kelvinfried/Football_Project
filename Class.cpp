@@ -164,8 +164,8 @@ class RPG_Item	//I want the enimies to have the items on their bodies
 class RPG_Inventory_Slot
 {
 	public:
-		int Slot_number
 		RPG_Item Item;
+		int Slot_number;
 		
 		RPG_Inventory_Slot()
 		{
@@ -179,8 +179,7 @@ class RPG_Character
 		std::string Name;
 		int Height;
 		int Mana;
-		//std::string Inventory_Slots[ 10 ];
-		//RPG_Inventory_Slot Slot[ 2 ];
+		RPG_Inventory_Slot Slot[ 2 ];
 			short Equipt_Weapon;
 		
 		int Start_location[ 2 ];
@@ -209,17 +208,18 @@ class RPG_Character
 			}
 		}
 		
-		void Attack()
+		void Attack_check()
 		{
-			if( Inventory_Slots[ Equipt_Weapon ].Item.Weapon == true )
+			/*if( Slot[ Equipt_Weapon ].Item.Weapon == true )
 			{
 				std::cout<< "You can attack with this weapon" << std::endl;
 			}
 			
 			else
 			{
-					std::cout<< "You cannot attack with this weapon" << std::endl;
-			}
+				std::cout<< "You cannot attack with this weapon" << std::endl;
+			}*/
+			//std::cout<< " The slot is " << Slot[ 0 ].Slot_number << std::endl;
 		}
 };
 
@@ -227,7 +227,7 @@ class RPG_Dungeon
 {
 	public:
 		std::string Name;
-		RPG_Character Player_character;
+		RPG_Character Player;
 		RPG_Character Entity[ 4 ];	//Need to add a start location to this so it's not redundant
 		
 		/*int Location_Of_Player[ 2 ];
@@ -272,12 +272,14 @@ int main()
 	
 	//RPG Code
 	RPG_Dungeon Starting_Dungeon;
+
 	//Top down class access
 	std::cout<< "The dungeon is called, " << Starting_Dungeon.Name << " the player enters the room, and starts at the location " << Starting_Dungeon.Entry_Point[ 0 ] << " , " << Starting_Dungeon.Entry_Point[ 1 ] << std::endl << " Do you want to know more.?" << std::endl;
 	
-	std::cout<<"You the player are called  " << Starting_Dungeon.Player_character.Name << " you have a height of " << Starting_Dungeon.Player_character.Height << std::endl;
+	std::cout<<"You the player are called  " << Starting_Dungeon.Player.Name << " you have a height of " << Starting_Dungeon.Player.Height << std::endl;
 	
-	std::cout<<"You are jumped and attempt to attack.. " << Starting_Dungeon.Player_character.Attack() << std::endl;	//Testing using the attack method
+	//std::cout<<"You are jumped and attempt to attack.. " << Starting_Dungeon.Player.Attack_check() << std::endl;	//Testing using the attack method
+	std::cout<<"You are jumped and attempt to attack.. " << Starting_Dungeon.Player.Slot[0].Item.Weapon << std::endl;	//Testing using the attack method
 	
 	return 0;
 }
