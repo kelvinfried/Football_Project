@@ -167,7 +167,7 @@ class RPG_Character
 		int Height;
 		int Mana;
 		//std::string Inventory_Slots[ 10 ];
-		RPG_Item Inventory_Slots[ 5 ];
+		RPG_Item Inventory_Slots[ 2 ];
 			short Equipt_Weapon;
 		
 		int Start_location[ 2 ];
@@ -181,10 +181,13 @@ class RPG_Character
 			/*for( int x = 0; x < 10; x++ )
 			{
 				Inventory_Slots[ x ] = "No Item in this slot";
-			}*/
+			}*/	//Need to fill array with a null value;
+			for( int x = 0; x < 2; x++ )
+			{
+				Inventory_Slots[ x ] = '\0';	//Testing to see if a null character works
+			}
+			
 			Equipt_Weapon = 0;
-			/*Start_location = { 0, 0 };
-			Current_location = { 0, 0 };*/	//Cannot assign values to an array like this, ammending
 			for( int x = 0; x < 2; x++ )
 			{
 				Start_location[ x ] = 0;
