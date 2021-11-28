@@ -181,8 +181,9 @@ int main()
 			std::string Name;
 			int Height;
 			int Mana;
+			
 			RPG_Inventory_Slot Slot[ 2 ];
-				short Equipt_Weapon;
+			short Equipt_Weapon;
 			
 			int Start_location[ 2 ];
 			int Current_location[ 2 ];
@@ -200,7 +201,6 @@ int main()
 				{
 					//Inventory_Slots[ x ] = '\0';	//Testing to see if a null character works	//Does not work
 				}*/
-				
 				Equipt_Weapon = 0;
 				
 				for( int x = 0; x < 2; x++ )
@@ -277,36 +277,9 @@ int main()
 	
 	std::cout<<"You the player are called  " << Starting_Dungeon.Player.Name << " you have a height of " << Starting_Dungeon.Player.Height << std::endl;
 	
-	std::cout<<"You are jumped and attempt to attack.. " << Starting_Dungeon.Player.Attack_check() << std::endl;	//Testing using the attack method	//Still cannot get this to work
+	//std::cout<<"You are jumped and attempt to attack.. " << Starting_Dungeon.Player.Attack_check() << std::endl;	//Testing using the attack method	//Still cannot get this to work
+	Starting_Dungeon.Player.Attack_check();
 	//std::cout<<"You are jumped and attempt to attack.. " << Starting_Dungeon.Player.Slot[0].Item.Weapon << std::endl;	//Testing using the attack method
 	
 	return 0;
 }
-
-class Class_1
-{
-	public:
-		int Value;
-		
-		Class_1()
-		{
-			Value = 1;
-		}
-};
-
-class Class_2
-{
-	public:
-		Class_1 Child_class;
-		int Value;
-		
-		Class_2()
-		{
-				Value = 2;
-		}
-		
-		Value_compare()
-		{
-			std::cout<< "The value from this class is:" << Value << " The child class has a value of " << Child_class.Value << std::endl; 
-		}
-};
